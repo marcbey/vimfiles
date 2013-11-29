@@ -65,3 +65,6 @@
 [submodule "bundle/gitgutter.vim"]
 	path = bundle/gitgutter.vim
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "bundle/tabular.vim"]
+	path = bundle/tabular.vim
+	url = https://github.com/godlygeek/tabular.git
