@@ -62,3 +62,6 @@
 [submodule "bundle/tagbar.vim"]
 	path = bundle/tagbar.vim
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/gitgutter.vim"]
+	path = bundle/gitgutter.vim
+	url = https://github.com/airblade/vim-gitgutter.git
