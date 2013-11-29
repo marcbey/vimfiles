@@ -2,6 +2,8 @@ See: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-
 
 For vim-airline, use one of these modified fonts: https://github.com/Lokaltog/powerline-fonts
 Currently, i use SourceCodePro.
+""""
+
 
 Installing your Vim environment on another machine:
 cd ~
