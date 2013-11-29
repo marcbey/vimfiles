@@ -61,6 +61,8 @@ set incsearch
 
 " Highlight matches.
 set hlsearch
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " Turn on line wrapping.
 set wrap
@@ -100,9 +102,6 @@ set showmatch
 
 " Toggle auto-indenting for code paste
 set pastetoggle=<F2>
-
-" Useful status information at bottom of screen
-:set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorsettings
