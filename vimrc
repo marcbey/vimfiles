@@ -196,13 +196,14 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " CTRL P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline vim-airline
 let g:airline_powerline_fonts = 1
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gundo
 nnoremap <F6> :GundoToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tagbar
+nmap <F7> :TagbarToggle<CR>
