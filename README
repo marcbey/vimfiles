@@ -24,3 +24,10 @@ cd ~/.vim
 git submodule add http://github.com/tpope/vim-vinegar.git bundle/vinegar
 git add .
 git commit -m "Install Fugitive.vim bundle as a submodule."
+
+
+Remove a submodule (dont forget to remove traces also in vimrc):
+cd ~/.vim
+git submodule deinit bundle/nerdtree
+git rm bundle/nerdtree
+git commit -m "Remove nerdtree plugin"
