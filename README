@@ -18,3 +18,9 @@ git pull origin master
 
 Upgrading all bundled plugins: 
 git submodule foreach git pull origin master
+
+Add a plugin (eg. vinegar):
+cd ~/.vim
+git submodule add http://github.com/tpope/vim-vinegar.git bundle/vinegar
+git add .
+git commit -m "Install Fugitive.vim bundle as a submodule."
