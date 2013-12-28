@@ -176,11 +176,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bundels & Plugins
 
-" NERDTREE mappings
-nmap ,n :NERDTreeFind<CR>
-nmap ,m :NERDTreeToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The silver Searcher ag
 " Use custom ag path
 "let g:agprg="/usr/local/bin/ag --column"
