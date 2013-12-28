@@ -152,6 +152,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Navigarte with hyper key in window splits
+map <M-C-D-S-left> <esc><C-w>h
+map <M-C-D-S-down> <esc><C-w>j
+map <M-C-D-S-up> <esc><C-w>k
+map <M-C-D-S-right> <esc><C-w>l
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File recognition
 
