@@ -71,3 +71,6 @@
 [submodule "bundle/vinegar"]
 	path = bundle/vinegar
 	url = http://github.com/tpope/vim-vinegar.git
+[submodule "bundle/wildfire"]
+	path = bundle/wildfire
+	url = https://github.com/gcmt/wildfire.vim.git
