@@ -103,6 +103,8 @@ set showmatch
 " Toggle auto-indenting for code paste
 set pastetoggle=<F2>
 
+" Omni completion
+set omnifunc=syntaxcomplete#Complete
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorsettings
 set background=dark
@@ -214,10 +216,11 @@ nmap <F7> :TagbarToggle<CR>
 highlight clear SignColumn
 
 
-
 augroup BgHighlight
   autocmd!
   autocmd WinEnter * set colorcolumn=80
   autocmd WinLeave * set colorcolumn=0
+  autocmd WinEnter * set cul
+  autocmd WinLeave * set nocul
 augroup END
 
