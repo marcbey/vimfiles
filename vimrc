@@ -199,6 +199,8 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " CTRL P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+inoremap <C-l> <esc>:CtrlPTag<cr>a
+nnoremap <C-l> :CtrlPTag<cr>a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline vim-airline
 let g:airline_powerline_fonts = 1
@@ -224,3 +226,5 @@ augroup BgHighlight
   autocmd WinLeave * set nocul
 augroup END
 
+" Reveal in Finder
+:map <leader>e :Reveal<cr>
