@@ -145,6 +145,9 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+" Press S to replace the current word with the last yanked text. 
+nnoremap S diw"0P
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Window Splits mappings
 nnoremap <leader>w <C-w>v<C-w>l
