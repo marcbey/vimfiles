@@ -78,5 +78,5 @@
 	path = bundle/vim-reveal-in-finder
 	url = https://github.com/henrik/vim-reveal-in-finder.git
 [submodule "vim-multiple-cursors"]
-	path = vim-multiple-cursors
+	path = bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
