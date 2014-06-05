@@ -127,6 +127,10 @@ highlight Cursor guibg=green
 " map leader
 :let mapleader = ","
 
+# Buffer navigation
+nmap <leader>1 :BufSurfBack<cr>
+map <leader>2 :BufSurfForward<cr>
+
 " Switch between the currently open buffer and the previous one,
 nnoremap <leader><leader> <c-^>
 
@@ -219,7 +223,6 @@ nmap <F7> :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gitgutter
 highlight clear SignColumn
-
 
 augroup BgHighlight
   autocmd!
