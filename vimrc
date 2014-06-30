@@ -234,3 +234,8 @@ augroup END
 
 " Reveal in Finder
 :map <leader>e :Reveal<cr>
+
+
+" YouCompleteMe
+let g:ycm_collect_identifiers_from_tags_files = 1
+
