@@ -127,7 +127,7 @@ highlight Cursor guibg=green
 " map leader
 :let mapleader = ","
 
-# Buffer navigation
+" Buffer navigation
 nmap <leader>1 :BufSurfBack<cr>
 map <leader>2 :BufSurfForward<cr>
 
