@@ -80,3 +80,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vinegar"]
+	path = bundle/vinegar
+	url = http://github.com/tpope/vim-vinegar.git
