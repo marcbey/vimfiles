@@ -18,3 +18,7 @@ set lines=60 columns=120
 
 " Don't show right scrollbar
 "set guioptions-=r
+"¬
+" Do not show balloons¬
+set noballooneval¬
+
