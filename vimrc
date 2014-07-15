@@ -59,6 +59,9 @@ set ruler
 " Highlight matches as you type.
 set incsearch
 
+" Do not show balloons
+set noballooneval
+
 " Highlight matches.
 set hlsearch
 " Press Space to turn off highlighting and clear any message already displayed.
