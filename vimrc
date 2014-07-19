@@ -81,6 +81,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Files and directories to hide
+let g:netrw_list_hide='.DS_Store$'
+
 " Global tab width.
 set tabstop=2
 set shiftwidth=2
