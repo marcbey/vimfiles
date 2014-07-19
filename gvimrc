@@ -20,5 +20,6 @@ set lines=60 columns=120
 "set guioptions-=r
 "¬
 " Do not show balloons¬
-set noballooneval¬
+set noballooneval
+set balloondelay=100000
 
