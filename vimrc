@@ -84,6 +84,7 @@ set noswapfile
 " Global tab width.
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 
 " Use spaces instead of tabs
 set expandtab
