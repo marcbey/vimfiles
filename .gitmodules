@@ -80,6 +80,3 @@
 [submodule "bundle/vinegar"]
 	path = bundle/vinegar
 	url = http://github.com/tpope/vim-vinegar.git
-[submodule "bundle/vim-bufsearch"]
-	path = bundle/vim-bufsearch
-	url = git@github.com:vim-scripts/Buffer-Search.git
