@@ -92,3 +92,6 @@
 [submodule "bundle/javascript-libraries-syntax"]
 	path = bundle/javascript-libraries-syntax
 	url = git@github.com:othree/javascript-libraries-syntax.vim.git
+[submodule "bundle/angular-vim-snippets"]
+	path = bundle/angular-vim-snippets
+	url = git@github.com:matthewsimo/angular-vim-snippets.git
