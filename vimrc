@@ -252,4 +252,5 @@ let g:angular_source_directory = 'app/source'
 let g:angular_test_directory = 'test/units'
 
 " Syntastic syntax checker ignores
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-", "ms-"]
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "ms-"] 
+let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
