@@ -74,9 +74,6 @@
 [submodule "vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "bundle/vinegar"]
 	path = bundle/vinegar
 	url = http://github.com/tpope/vim-vinegar.git
