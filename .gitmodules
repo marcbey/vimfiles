@@ -95,3 +95,6 @@
 [submodule "bundle/angular-vim-snippets"]
 	path = bundle/angular-vim-snippets
 	url = git@github.com:matthewsimo/angular-vim-snippets.git
+[submodule "bundle/jasmin"]
+	path = bundle/jasmin
+	url = git@github.com:claco/jasmine.vim.git
