@@ -86,6 +86,3 @@
 [submodule "bundle/vim-bufsurf"]
 	path = bundle/vim-bufsurf
 	url = git@github.com:ton/vim-bufsurf.git
-[submodule "vim-javascript"]
-	path = vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
