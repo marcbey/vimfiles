@@ -153,6 +153,8 @@ map <leader>tm :tabmove
 " Press S to replace the current word with the last yanked text. 
 nnoremap S diw"0P
 
+" Press leader c to replace all currences of the word under cursor
+nnoremap <Leader>c :%s/\<<C-r><C-w>\>//g<Left><Left>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Window Splits mappings
 nnoremap <leader>w <C-w>v<C-w>l
