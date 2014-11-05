@@ -56,9 +56,6 @@
 [submodule "bundle/vim-snipmate-snippets.vim"]
 	path = bundle/vim-snipmate-snippets.vim
 	url = https://github.com/honza/vim-snippets.git
-[submodule "bundle/gundo.vim"]
-	path = bundle/gundo.vim
-	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/tagbar.vim"]
 	path = bundle/tagbar.vim
 	url = https://github.com/majutsushi/tagbar.git
@@ -68,9 +65,6 @@
 [submodule "bundle/tabular.vim"]
 	path = bundle/tabular.vim
 	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/vinegar"]
-	path = bundle/vinegar
-	url = http://github.com/tpope/vim-vinegar.git
 [submodule "bundle/wildfire"]
 	path = bundle/wildfire
 	url = https://github.com/gcmt/wildfire.vim.git
@@ -80,3 +74,30 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim-multiple-cursors"]
+	path = bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/vinegar"]
+	path = bundle/vinegar
+	url = http://github.com/tpope/vim-vinegar.git
+[submodule "vim-bufsurf"]
+	path = vim-bufsurf
+	url = git@github.com:ton/vim-bufsurf.git
+[submodule "bundle/vim-bufsurf"]
+	path = bundle/vim-bufsurf
+	url = git@github.com:ton/vim-bufsurf.git
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+[submodule "bundle/javascript-libraries-syntax"]
+	path = bundle/javascript-libraries-syntax
+	url = git@github.com:othree/javascript-libraries-syntax.vim.git
+[submodule "bundle/angular-vim-snippets"]
+	path = bundle/angular-vim-snippets
+	url = git@github.com:matthewsimo/angular-vim-snippets.git
+[submodule "bundle/jasmin"]
+	path = bundle/jasmin
+	url = git@github.com:claco/jasmine.vim.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe.git

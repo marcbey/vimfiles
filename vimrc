@@ -84,6 +84,7 @@ set noswapfile
 " Global tab width.
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 
 " Use spaces instead of tabs
 set expandtab
@@ -127,6 +128,10 @@ highlight Cursor guibg=green
 " map leader
 :let mapleader = ","
 
+" Buffer navigation
+nmap <leader>1 :BufSurfBack<cr>
+map <leader>2 :BufSurfForward<cr>
+
 " Switch between the currently open buffer and the previous one,
 nnoremap <leader><leader> <c-^>
 
@@ -145,6 +150,11 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+" Press S to replace the current word with the last yanked text. 
+nnoremap S diw"0P
+
+" Press leader c to replace all currences of the word under cursor
+nnoremap <Leader>c :%s/\<<C-r><C-w>\>//g<Left><Left>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Window Splits mappings
 nnoremap <leader>w <C-w>v<C-w>l
@@ -217,7 +227,6 @@ nmap <F7> :TagbarToggle<CR>
 " Gitgutter
 highlight clear SignColumn
 
-
 augroup BgHighlight
   autocmd!
   autocmd WinEnter * set colorcolumn=80
@@ -236,3 +245,19 @@ augroup END
 
 " configure easytags to run ctags after saving the buffer
 " let g:easytags_events = ['BufWritePost']
+
+" YouCompleteMe
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+" Files and directories to hide
+set wildignore=.DS_Store,.sass-cache/
+
+
+
+" Angular
+let g:angular_source_directory = 'app/source'
+let g:angular_test_directory = 'test/units'
+
+" Syntastic syntax checker ignores
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "ms-"] 
+let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
