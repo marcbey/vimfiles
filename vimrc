@@ -228,3 +228,11 @@ augroup END
 
 " Reveal in Finder
 :map <leader>e :Reveal<cr>
+
+" easytags (bundle/vim-misc as a dependency)
+" ensure it checks the project specific tags file
+" set tags=./tags
+" let g:easytags_dynamic_files = 1
+
+" configure easytags to run ctags after saving the buffer
+" let g:easytags_events = ['BufWritePost']
