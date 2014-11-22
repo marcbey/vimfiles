@@ -82,7 +82,7 @@
 	url = http://github.com/tpope/vim-vinegar.git
 [submodule "vim-bufsurf"]
 	path = vim-bufsurf
-	url = git@github.com:ton/vim-bufsurf.git
+	url = git@github.com:jgallen23/vim-bufsurf.git
 [submodule "bundle/vim-bufsurf"]
 	path = bundle/vim-bufsurf
 	url = git@github.com:ton/vim-bufsurf.git
@@ -101,3 +101,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule "bundle/vim-yamnl-helper"]
+	path = bundle/vim-yamnl-helper
+	url = git@github.com:lmeijvogel/vim-yaml-helper.git
