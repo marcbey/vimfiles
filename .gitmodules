@@ -101,3 +101,6 @@
 [submodule "bundle/vim-yamnl-helper"]
 	path = bundle/vim-yamnl-helper
 	url = git@github.com:lmeijvogel/vim-yaml-helper.git
+[submodule "bundle/ouCompleteMe"]
+	path = bundle/ouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe.git
