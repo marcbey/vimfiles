@@ -98,9 +98,6 @@
 [submodule "bundle/jasmin"]
 	path = bundle/jasmin
 	url = git@github.com:claco/jasmine.vim.git
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = git@github.com:Valloric/YouCompleteMe.git
 [submodule "bundle/vim-yamnl-helper"]
 	path = bundle/vim-yamnl-helper
 	url = git@github.com:lmeijvogel/vim-yaml-helper.git
