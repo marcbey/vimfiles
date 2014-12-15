@@ -104,3 +104,6 @@
 [submodule "bundle/ouCompleteMe"]
 	path = bundle/ouCompleteMe
 	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule "bundle/vim-endwise"]
+	path = bundle/vim-endwise
+	url = git@github.com:tpope/vim-endwise.git
