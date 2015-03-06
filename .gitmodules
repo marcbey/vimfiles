@@ -104,3 +104,6 @@
 [submodule "bundle/vim-bufsurf"]
 	path = bundle/vim-bufsurf
 	url = git@github.com:jgallen23/vim-bufsurf.git
+[submodule "bundle/vim-ctrlp"]
+	path = bundle/vim-ctrlp
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
