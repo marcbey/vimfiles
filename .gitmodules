@@ -101,12 +101,12 @@
 [submodule "bundle/vim-endwise"]
 	path = bundle/vim-endwise
 	url = git@github.com:tpope/vim-endwise.git
-[submodule "bundle/vim-bufsurf"]
-	path = bundle/vim-bufsurf
-	url = git@github.com:jgallen23/vim-bufsurf.git
 [submodule "bundle/vim-ctrlp"]
 	path = bundle/vim-ctrlp
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git@github.com:mileszs/ack.vim.git
+[submodule "bundle/vim-bufsurf"]
+	path = bundle/vim-bufsurf
+	url = git@github.com:jgallen23/vim-bufsurf.git
