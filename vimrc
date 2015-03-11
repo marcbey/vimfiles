@@ -150,7 +150,7 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-" Press S to replace the current word with the last yanked text. 
+" Press S to replace the current word with the last yanked text.
 nnoremap S diw"0P
 
 " Press leader c to replace all currences of the word under cursor
@@ -191,16 +191,15 @@ endif
 " The silver Searcher ag
 " Use custom ag path
 "let g:agprg="/usr/local/bin/ag --column"
-if executable('ag')
   " Use ag over grep
-  set grepprg=ag\ --nogroup
+  let g:ackprg = 'ag --skip-vcs-ignores --nogroup --nocolor --column'
+  let g:agprg="ag --skip-vcs-ignores --nogroup --nocolor --column"
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l -g ""'
+  let g:ctrlp_user_command = 'ag %s -U -l --files-with-matches --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
-endif
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -260,5 +259,5 @@ let g:angular_source_directory = 'app/source'
 let g:angular_test_directory = 'test/units'
 
 " Syntastic syntax checker ignores
-let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "ms-"] 
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "ms-"]
 let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'

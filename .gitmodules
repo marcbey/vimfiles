@@ -107,3 +107,6 @@
 [submodule "bundle/vim-ctrlp"]
 	path = bundle/vim-ctrlp
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = git@github.com:mileszs/ack.vim.git
