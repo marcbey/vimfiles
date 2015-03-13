@@ -35,9 +35,6 @@
 	path = bundle/greplace.vim
 	url = https://github.com/skwp/greplace.vim.git
   ignore = untracked 
-[submodule "bundle/tcomment.vim"]
-	path = bundle/tcomment.vim
-	url = https://github.com/tomtom/tcomment_vim.git
 [submodule "bundle/tlib.vim"]
 	path = bundle/tlib.vim
 	url = https://github.com/tomtom/tlib_vim.git
@@ -113,3 +110,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
