@@ -63,6 +63,7 @@ set incsearch
 
 " Highlight matches.
 set hlsearch
+
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
@@ -179,7 +180,7 @@ map <M-C-D-S-right> <esc><C-w>l
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " Json files
-au BufNewFile,BufRead *.json set ft=javascript
+au BufRead,BufNewFile {*.hbs,*.js.erb,*.es6,*.json} set ft=javascript
 
 " Remember last location in file
 if has("autocmd")
@@ -191,20 +192,8 @@ endif
 " Bundels & Plugins
 
 " The silver Searcher ag
-" Use custom ag path
-"let g:agprg="/usr/local/bin/ag --column"
-  " Use ag over grep
-  let g:ackprg = 'ag --skip-vcs-ignores --nogroup --nocolor --column'
-  let g:agprg="ag --skip-vcs-ignores --nogroup --nocolor --column"
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -U -l --files-with-matches --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-
-" bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+let g:ackprg = 'ag --skip-vcs-ignores --nogroup --nocolor --column'
+let g:agprg="ag --skip-vcs-ignores --nogroup --nocolor --column"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CTRL P
@@ -212,6 +201,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 inoremap <C-l> <esc>:CtrlPTag<cr>a
 nnoremap <C-l> :CtrlPTag<cr>a
+
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -U -l --files-with-matches --nocolor -g ""'
+let g:ctrlp_by_filename = 1
+" let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:15,results:15'
+let g:ctrlp_use_caching = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline vim-airline
@@ -254,12 +249,5 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 " Files and directories to hide
 set wildignore=.DS_Store,.sass-cache/
 
-
-
-" Angular
-let g:angular_source_directory = 'app/source'
-let g:angular_test_directory = 'test/units'
-
-" Syntastic syntax checker ignores
-let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "ms-"]
-let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
+" let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "ms-"]
+" let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
