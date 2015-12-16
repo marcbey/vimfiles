@@ -1,13 +1,62 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Must come first because it changes other options.
-set nocompatible
+runtime macros/matchit.vim
 
-" pathogen.vim : Easy manipulation of 'runtimepath', 'path', 'tags', etc
-" http://www.vim.org/scripts/script.php?script_id=2332
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set the runtime path to include Vundle and initialize
+"
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-execute pathogen#infect()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'sjl/gundo.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'henrik/vim-reveal-in-finder'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-vinegar'
+Plugin 'lmeijvogel/vim-yaml-helper'
+Plugin 'gcmt/wildfire.vim'
+Plugin 'jgallen23/vim-bufsurf'
+Plugin 'bling/vim-airline'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-haml'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rake'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Turn on syntax highlighting.
 syntax enable
@@ -107,12 +156,14 @@ set showmatch
 " Toggle auto-indenting for code paste
 set pastetoggle=<F2>
 
-" Omni completion
-set omnifunc=syntaxcomplete#Complete
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorsettings
-set background=dark
 colorscheme solarized
+set background=dark
+
+if has('gui_running')
+else
+  " let g:solarized_termcolors=256
+endif
 
 " Invisible character colors
 highlight NonText guifg=#4a4a59
@@ -121,12 +172,14 @@ highlight Cursor guibg=green
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Function keys
+"
 
 " Remove trailing whitespace with F5
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader mappings
+"
 
 " map leader
 :let mapleader = ","
@@ -141,24 +194,12 @@ nnoremap <leader><leader> <c-^>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tab mappings.
-map <leader>tt :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
-map <leader>tf :tabfirst<cr>
-map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
-
 " Press S to replace the current word with the last yanked text.
 nnoremap S diw"0P
 
 " Press leader c to replace all currences of the word under cursor
 nnoremap <Leader>c :%s/\<<C-r><C-w>\>//g<Left><Left>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Window Splits mappings
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>s <C-w>s<C-w>l
@@ -175,12 +216,13 @@ map <M-C-D-S-right> <esc><C-w>l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File recognition
+"
 
 " Ruby files
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " Json files
-au BufRead,BufNewFile {*.hbs,*.js.erb,*.es6,*.json} set ft=javascript
+au BufRead,BufNewFile {*.handlebars,*.hbs,*.js.erb,*.es6,*.json} set ft=javascript
 
 " Remember last location in file
 if has("autocmd")
@@ -190,12 +232,12 @@ endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Bundels & Plugins
+"
 
 " The silver Searcher ag
 let g:ackprg = 'ag --skip-vcs-ignores --nogroup --nocolor --column'
-let g:agprg="ag --skip-vcs-ignores --nogroup --nocolor --column"
+let g:ag_prg="ag --skip-vcs-ignores --nogroup --nocolor --column"
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CTRL P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -208,46 +250,15 @@ let g:ctrlp_by_filename = 1
 " let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:15,results:15'
 let g:ctrlp_use_caching = 0
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" powerline vim-airline
-let g:airline_powerline_fonts = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" gundo
-nnoremap <F6> :GundoToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tagbar
-nmap <F7> :TagbarToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Gitgutter
-highlight clear SignColumn
-
-augroup BgHighlight
-  autocmd!
-  autocmd WinEnter * set colorcolumn=80
-  autocmd WinLeave * set colorcolumn=0
-  autocmd WinEnter * set cul
-  autocmd WinLeave * set nocul
-augroup END
-
-" Reveal in Finder
-:map <leader>e :Reveal<cr>
-
-" easytags (bundle/vim-misc as a dependency)
-" ensure it checks the project specific tags file
-" set tags=./tags
-" let g:easytags_dynamic_files = 1
-
-" configure easytags to run ctags after saving the buffer
-" let g:easytags_events = ['BufWritePost']
-
 " YouCompleteMe
 let g:ycm_collect_identifiers_from_tags_files = 1
 
-" Files and directories to hide
-set wildignore=.DS_Store,.sass-cache/
 
-" let g:syntastic_html_tidy_ignore_errors=["proprietary attribute \"ng-", "ms-"]
-" let g:syntastic_html_tidy_exec = '/usr/local/bin/tidy'
+" Git Fugitve
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gb :Gblame<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>ga :Gwrite<cr>
+nmap <leader>gl :Glog<cr>
+nmap <leader>gd :Gdiff<cr>
+

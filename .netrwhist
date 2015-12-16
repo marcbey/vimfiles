@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/sch0115m/github/www2014-closed/app/models'
+let g:netrw_dirhist_2='/Users/sch0115m/.gem/ruby/2.2.1/gems/thin-1.6.2'
+let g:netrw_dirhist_3='/Users/sch0115m/.gem/ruby/2.2.1/gems/sinatra-1.4.5'
+let g:netrw_dirhist_4='/Users/sch0115m/github/www2014-closed'
+let g:netrw_dirhist_5='/Users/sch0115m'
+let g:netrw_dirhist_6='/Users/sch0115m/github'
+let g:netrw_dirhist_7='/Users/sch0115m/github/www2014-closed'
+let g:netrw_dirhist_8='/Users/sch0115m/github/www2014-closed/app'
+let g:netrw_dirhist_9='/Users/sch0115m/github/www2014-closed/app/controllers'
